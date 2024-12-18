@@ -4,7 +4,7 @@ theme: custom-default
 footer: 'https://example.com'
 ---
 
-# My Presentation
+# BS7204 My Presentation
 ![bg right](https://picsum.photos/800/600)
 
 ---
