@@ -9,19 +9,15 @@ footer: 'https://example.com'
 
 ---
 
-<!-- Speaker Notes -->
 ## Slide 1
 
 - Item 1
 - Item 2
 - Item 3
-<!-- Can have multiple on a slide -->
 
 ---
 
 ## Slide 2
-<!-- Can also do a multiline
-comment that will show in notes -->
 
 ![Image](https://picsum.photos/800/600)
 
@@ -80,7 +76,6 @@ comment that will show in notes -->
 
 ---
 
-<!-- Needed for mermaid, can be anywhere in file except frontmatter -->
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
