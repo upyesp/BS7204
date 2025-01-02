@@ -1,7 +1,8 @@
 ---
 marp: true
 theme: custom-default
-footer: 'https://example.com'
+class: invert
+transition: fade
 ---
 
 # BS7204 My Presentation
