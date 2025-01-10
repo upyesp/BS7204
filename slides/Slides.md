@@ -6,7 +6,7 @@ transition: fade
 ---
 
 # BS7204 My Presentation
-![bg right](https://picsum.photos/800/600)
+![bg right](./img/test animation.gif)
 
 ---
 
