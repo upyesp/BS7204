@@ -6,7 +6,7 @@ transition: fade
 ---
 
 # BS7204 My Presentation
-![bg right](./img/test animation.gif)
+![Image](./img/test_animation.gif)
 
 ---
 
