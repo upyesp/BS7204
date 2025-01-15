@@ -6,7 +6,36 @@ transition: fade
 ---
 
 # BS7204 My Presentation
-![Image](./img/test_animation.gif)
+
+---
+
+## Opening
+
+---
+
+## Situation
+
+---
+
+## Problems
+
+---
+
+## Options
+
+---
+
+## Proposal
+
+---
+
+## Endpoints
+
+---
+
+## References
+
+---
 
 ---
 
@@ -15,6 +44,8 @@ transition: fade
 - Item 1
 - Item 2
 - Item 3
+
+![Image](./img/test_animation.gif)
 
 ---
 
