@@ -15,6 +15,24 @@ Student: Peter Torkington, ID: 1902008
 
 ---
 
+markdown style
+
+[![asciicast](https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.svg)](https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk)
+
+---
+
+html style
+
+<a href="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk" target="_blank"><img src="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.svg" /></a>
+
+---
+
+embedded player
+
+<script src="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.js" id="asciicast-ZwEaSiCxxkvhJrS4yENdteyMk" async="true"></script>
+
+---
+
 ## Presentation Overview
 
 1. Scope and Requirements
