@@ -5,37 +5,194 @@ class: invert
 transition: fade
 ---
 
-# BS7204 My Presentation
+# Learning Café Penetration Test
+
+## University of Winchester
+
+Module: BS7204 Network Security and Penetration Testing
+Lecturer: Rhys Lockley
+Student: Peter Torkington, ID: 1902008
 
 ---
 
-## Opening
+## Presentation Overview
+
+1. Scope and Requirements
+2. Vulnerability Analysis
+3. Testing Methodology
+4. Key Findings
+5. Secure Design Recommendations
+6. Conclusion
 
 ---
 
-## Situation
+## Scope of the Learning Café
+
+- **Systems Evaluated:**
+  - Network infrastructure (wired & wireless)
+  - Virtual Learning Environment (VLE)
+  - Email services and academic databases
+  - Online ordering system
+  - Workstations and printers
+
+- **Testing Constraints:**
+  - Legal compliance (e.g., Computer Misuse Act 1990, GDPR).
+  - Ethical guidelines (e.g., OWASP, BCS).
 
 ---
 
-## Problems
+## Vulnerabilities Identified
+
+- **Network Infrastructure:**
+  - Weak segmentation.
+  - Risks from public Wi-Fi.
+
+- **Authentication & Access Control:**
+  - Susceptibility to phishing.
+  - Insecure BYOD connections.
+
+- **Web-Based Applications:**
+  - SQL Injection & Cross-Site Scripting (XSS).
+
+- **Emerging Threats:**
+  - AI-driven attacks.
+  - Ransomware targeting educational institutions.
 
 ---
 
-## Options
+## Practical Evidence: Network Discovery
+
+- **Tools Used:**
+  - `nmap` for network mapping.
+  - OpenVAS for vulnerability scanning.
+
+- **Findings:**
+  - Discovered devices: Metasploitable2, Metasploitable3, Debian server.
+  - Total vulnerabilities:
+    - High severity: 30.
+    - Medium severity: 49.
 
 ---
 
-## Proposal
+## Practical Evidence: Exploits
+
+- **Metasploitable2:**
+  - FTP (ProFTPD): Remote Code Execution (CVE-2015-3306).
+  - Telnet: Default credentials used to gain access.
+  - Samba share: Uploaded malicious web shell.
+
+- **Metasploitable3:**
+  - Apache (mod_cgi): Exploited Shellshock vulnerability (CVE-2014-6271).
+  - CUPS: Remote Code Execution.
+  - Privilege escalation to root.
 
 ---
 
-## Endpoints
+## Testing Methodology: NIST SP 800-115
+
+1. **Planning:**
+   - Define objectives, scope, and rules of engagement.
+2. **Discovery:**
+   - Active and passive reconnaissance.
+3. **Attack:**
+   - Exploiting vulnerabilities to validate findings.
+4. **Reporting:**
+   - Categorising vulnerabilities and proposing mitigations.
+
+---
+
+## Key Findings
+
+- **Critical Vulnerabilities:**
+  - FTP and Telnet on Metasploitable2.
+  - Apache and CUPS on Metasploitable3.
+
+- **Moderate Vulnerabilities:**
+  - Samba shares enabling lateral movement.
+  - MySQL misconfigurations.
+
+- **Impact:**
+  - Unauthorised access to sensitive systems.
+  - Potential for university-wide compromise.
+
+---
+
+## Secure Design Recommendations
+
+### Network Security
+- Implement segmentation between public and private networks.
+- Enforce WPA3 encryption for Wi-Fi.
+
+### Authentication
+- Use multi-factor authentication (MFA).
+- Enforce password complexity and regular updates.
+
+### Application Security
+- Regular patching of software and systems.
+- Conduct code reviews and dynamic testing.
+
+---
+
+## Secure Infrastructure
+
+1. **Firewalls:**
+   - Deploy stateful firewalls to limit unauthorised traffic.
+2. **Endpoint Security:**
+   - Install antivirus and endpoint detection tools.
+3. **Monitoring & Alerts:**
+   - Use SIEM systems for real-time threat detection.
+4. **Training:**
+   - Conduct regular user awareness programmes.
+
+---
+
+## Visual Evidence
+
+### Screenshots:
+
+- **Network Mapping:**
+  - `nmap` output showcasing device discovery.
+- **Vulnerability Scan:**
+  - OpenVAS results highlighting critical vulnerabilities.
+- **Exploitation Results:**
+  - Screenshots of successful exploits.
+
+---
+
+## Countermeasure Justifications
+
+### Addressed Vulnerabilities:
+
+- **FTP:** Disable unencrypted FTP services.
+- **Apache & CUPS:** Regular updates and secure configurations.
+- **Telnet:** Replace with SSH for secure remote access.
+
+### Infrastructure Enhancements:
+
+- Harden BYOD policies.
+- Introduce VLANs for network segmentation.
+
+---
+
+## Conclusion
+
+- **Key Outcomes:**
+  - Identified critical vulnerabilities in network and application layers.
+  - Proposed actionable countermeasures for improvement.
+
+- **Next Steps:**
+  - Implement secure design recommendations.
+  - Regularly review and update security practices.
 
 ---
 
 ## References
 
 ---
+
+## Thank You
+
+### Questions?
 
 ---
 
