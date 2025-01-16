@@ -28,21 +28,9 @@ VHS mp4
 
 ---
 
-asciinema markdown style
-
-[![asciicast](https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.svg)](https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk)
-
----
-
-asciinema html style
-
-<a href="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk" target="_blank"><img src="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.svg" /></a>
-
----
-
 asciinema embedded player
 
-<script src="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.js" id="asciicast-ZwEaSiCxxkvhJrS4yENdteyMk" async="true"></script>
+<script src="https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js" id="asciicast-Cot91Mx86xyZD7VFMa2c0yqba" async="true"></script>
 
 ---
 
