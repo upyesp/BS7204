@@ -15,19 +15,41 @@ Student: Peter Torkington, ID: 1902008
 
 ---
 
-markdown style
+VHS GIF
+![Image](./img/demo.gif)
+
+---
+
+VHS mp4
+<video width="1200" height="600" controls>
+  <source src="./video/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+VHS WebM
+
+<video width="1200" height="6000" controls>
+  <source src="./video/demo.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+asciinema markdown style
 
 [![asciicast](https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.svg)](https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk)
 
 ---
 
-html style
+asciinema html style
 
 <a href="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk" target="_blank"><img src="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.svg" /></a>
 
 ---
 
-embedded player
+asciinema embedded player
 
 <script src="https://asciinema.org/a/ZwEaSiCxxkvhJrS4yENdteyMk.js" id="asciicast-ZwEaSiCxxkvhJrS4yENdteyMk" async="true"></script>
 
