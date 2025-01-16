@@ -22,7 +22,7 @@ VHS GIF
 
 VHS mp4
 <video width="1200" height="600" controls>
-  <source src="./video/demo.mp4" type="video/mp4">
+  <source src="./img/demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -30,8 +30,8 @@ VHS mp4
 
 VHS WebM
 
-<video width="1200" height="6000" controls>
-  <source src="./video/demo.webm" type="video/webm">
+<video width="1200" height="600" controls>
+  <source src="./img/demo.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 
