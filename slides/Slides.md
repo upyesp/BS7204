@@ -8,7 +8,7 @@ transition: fade
 # Learning Café Penetration Test
 
 ## University of Winchester
-
+![bg right](./img/uow.png)
 Module: BS7204 Network Security and Penetration Testing
 Lecturer: Rhys Lockley
 Student: Peter Torkington, ID: 1902008
@@ -23,15 +23,6 @@ VHS GIF
 VHS mp4
 <video width="1200" height="600" controls>
   <source src="./img/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
----
-
-VHS WebM
-
-<video width="1200" height="600" controls>
-  <source src="./img/demo.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 
