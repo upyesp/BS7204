@@ -8,7 +8,7 @@ transition: fade
 # Learning Café Penetration Test
 
 ## University of Winchester
-![bg left:35%](./img/uow.png)
+![Image](./img/uow.png)
 Module: BS7204 Network Security and Penetration Testing
 Lecturer: Rhys Lockley
 Student: Peter Torkington, ID: 1902008
