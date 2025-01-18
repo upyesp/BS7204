@@ -44,8 +44,13 @@ asciinema embedded player
 <script src='https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js' id='asciicast-Cot91Mx86xyZD7VFMa2c0yqba' 
   async='true' 
   data-poster='npt:0:01' 
-  data-markers='5.0:Installation,25.0:Configuration,66.6:Usage,176.5:Tips & Tricks' 
-  data-pauseOnMarkers='true' 
+  data-markers='[
+    [3, 'Intro'],
+    [5, 'Foo'],
+    [9, 'Bar'],
+    [15, 'Baz'],
+    [30, 'Qux'],
+  ]' 
 ></script>
 
 ---
