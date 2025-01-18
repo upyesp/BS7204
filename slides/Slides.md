@@ -41,10 +41,11 @@ VHS mp4
 
 asciinema embedded player
 
-<script src="https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js" id="asciicast-Cot91Mx86xyZD7VFMa2c0yqba"  async="true" 
-data-poster="npt:0:01" 
-data-pauseOnMarkers="true" 
-data-marker="npt:0:11" 
+<script src='https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js' id='asciicast-Cot91Mx86xyZD7VFMa2c0yqba' 
+  async='true' 
+  data-poster='npt:0:01' 
+  data-pauseOnMarkers='true' 
+  
 ></script>
 
 ---
