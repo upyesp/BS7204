@@ -38,15 +38,11 @@ VHS mp4
 </video>
 
 ---
-
-asciinema embedded player
-
 <script src='https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js' id='asciicast-Cot91Mx86xyZD7VFMa2c0yqba' 
   async='true' 
   data-poster='npt:0:01' 
   data-pause-on-markers='true' 
 ></script>
-
 ---
 
 ## Scope of the Learning Café
