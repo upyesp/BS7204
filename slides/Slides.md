@@ -30,7 +30,7 @@ VHS mp4
 
 asciinema embedded player
 
-<script src="https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js" id="asciicast-Cot91Mx86xyZD7VFMa2c0yqba" async="true" poster="npt:1:17" ></script>
+<script src="https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js" id="asciicast-Cot91Mx86xyZD7VFMa2c0yqba" async="true" data-poster="frame" ></script>
 
 ---
 
