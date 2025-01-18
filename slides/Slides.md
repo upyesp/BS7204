@@ -15,6 +15,17 @@ Student: Peter Torkington, ID: 1902008
 
 ---
 
+## Presentation Overview
+
+1. Scope and Requirements
+1. Vulnerability Analysis
+1. Testing Methodology
+1. Key Findings
+1. Secure Design Recommendations
+1. Conclusion
+
+---
+
 VHS GIF
 ![Image](./img/demo.gif)
 
@@ -30,18 +41,9 @@ VHS mp4
 
 asciinema embedded player
 
-<script src="https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js" id="asciicast-Cot91Mx86xyZD7VFMa2c0yqba" async="true" data-poster="frame" ></script>
-
----
-
-## Presentation Overview
-
-1. Scope and Requirements
-2. Vulnerability Analysis
-3. Testing Methodology
-4. Key Findings
-5. Secure Design Recommendations
-6. Conclusion
+<script src="https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js" id="asciicast-Cot91Mx86xyZD7VFMa2c0yqba"  async="true" 
+data-poster="data:text/plain,I'm regular \x1b[1;32mI'm bold green\x1b[3BI'm 3 lines down" 
+></script>
 
 ---
 
