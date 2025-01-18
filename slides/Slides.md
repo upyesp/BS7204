@@ -45,11 +45,11 @@ asciinema embedded player
   async='true' 
   data-poster='npt:0:01' 
   data-markers='[
-    [3, 'Intro'],
-    [5, 'Foo'],
-    [9, 'Bar'],
-    [15, 'Baz'],
-    [30, 'Qux'],
+    [3, "Intro"],
+    [5, "Foo"],
+    [9, "Bar"],
+    [15, "Baz"],
+    [30, "Qux"],
   ]' 
 ></script>
 
