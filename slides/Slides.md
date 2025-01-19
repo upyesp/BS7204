@@ -25,23 +25,9 @@ Student: Peter Torkington, ID: 1902008
 1. Conclusion
 
 ---
-
-VHS GIF
-![Image](./img/demo.gif)
-
----
-
-VHS mp4
-<video width="1200" height="600" controls>
-  <source src="./img/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
----
-<script src='https://asciinema.org/a/Cot91Mx86xyZD7VFMa2c0yqba.js' id='asciicast-Cot91Mx86xyZD7VFMa2c0yqba' 
-  async='true' 
+<script src="https://asciinema.org/a/45UBTj01G7Yf7Sz5dDxgh2iiN.js" id="asciicast-45UBTj01G7Yf7Sz5dDxgh2iiN" 
+  async="true" 
   data-poster='npt:0:01' 
-  data-pause-on-markers='true' 
 ></script>
 ---
 
