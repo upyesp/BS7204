@@ -4,13 +4,12 @@ theme: custom-default
 class: invert
 transition: fade
 paginate: true
-footer: 'Peter Torkington, 1902008'
 ---
 
 # Learning Café Penetration Test
 
 ## University of Winchester
-![Image](./img/uow.png)
+![UoW Logo](./img/uow.png)
 Module: BS7204 Network Security and Penetration Testing
 Lecturer: Rhys Lockley
 Student: Peter Torkington, ID: 1902008
@@ -114,18 +113,22 @@ Categorising vulnerabilities and proposing mitigations.
 
 - `nmap` for network mapping
 - OpenVAS for vulnerability scanning
+  
+![OpenVAS Results Summary](./img/OpenVAS Results By Severity Class - Pie.png)
 
 </div>
 <div>
 
-## Exploits
+### Exploits
 
 - Metasploit Framework v6
 
 </div>
 </div>
 
-### Findings
+---
+
+## Findings
 
 - Discovered devices: Metasploitable2, Metasploitable3, Debian
 - Total vulnerabilities (OpennVAS):
