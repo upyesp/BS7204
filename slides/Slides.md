@@ -113,8 +113,6 @@ Categorising vulnerabilities and proposing mitigations.
 
 - `nmap` for network mapping
 - OpenVAS for vulnerability scanning
-  
-![OpenVAS Results Summary](./img/OpenVAS Results By Severity Class - Pie.png)
 
 </div>
 <div>
@@ -125,6 +123,9 @@ Categorising vulnerabilities and proposing mitigations.
 
 </div>
 </div>
+  
+![OpenVAS Results Summary](./img/OpenVAS_Results_By_Severity_Class_Pie.png)
+
 
 ---
 
