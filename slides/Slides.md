@@ -28,9 +28,27 @@ pete - update this last
 
 ---
 
-## Scope of the Learning Café
+## Penetration Testing Methodology Used: NIST SP 800-115
 
-### Network & Systems
+### 1. Planning
+
+Define objectives, scope, and rules of engagement.
+
+### 2. Discovery
+
+Active and passive reconnaissance.
+
+### 3. Attack
+
+Exploiting vulnerabilities to validate findings.
+
+### 4. Reporting
+
+Categorising vulnerabilities and proposing mitigations.
+
+---
+
+## Scope of the Learning Café Network & Systems
 
 - Network infrastructure (wired & wireless)
 - Virtual Learning Environment (VLE)
@@ -38,13 +56,17 @@ pete - update this last
 - Online ordering system
 - Workstations and printers
 
-### Testing Constraints
+---
+
+### Constraints
+
 - Legal compliance (Computer Misuse Act 1990, DPA 2018)
 - Ethical guidelines (NIST SP 800-115)
 - Virtual environment (Metasploitable2 & Metasploitable3)
+
 ---
 
-## Learning Café Vulnerabilities
+## Learning Café Vulnerabilities (1 of 2)
 
 ### Network Infrastructure
 
@@ -55,6 +77,10 @@ pete - update this last
 
 - Susceptibility to phishing
 - Insecure BYOD connections
+
+---
+
+## Learning Café Vulnerabilities (2 of 2)
 
 ### Web-Based Applications
 
@@ -68,12 +94,34 @@ pete - update this last
 
 ---
 
-## Practical Evidence: Network Discovery
+## Practical Evidence
 
-### Tools Used
+<script src="https://asciinema.org/a/45UBTj01G7Yf7Sz5dDxgh2iiN.js" id="asciicast-45UBTj01G7Yf7Sz5dDxgh2iiN" 
+  async="true" 
+  data-preload="true" 
+  data-poster='npt:0:01' 
+></script>
+
+---
+
+## Tools Used
+<div class="columns">
+<div>
+
+### Network 
 
 - `nmap` for network mapping
 - OpenVAS for vulnerability scanning
+
+</div>
+<div>
+
+## Exploits
+
+- Metasploit Framework v6
+
+</div>
+</div>
 
 ### Findings
 
@@ -96,32 +144,6 @@ pete - update this last
 
 - Apache (mod_cgi): Exploited Shellshock vulnerability (CVE-2014-6271)
 - CUPS: Remote Code Execution
-
----
-<script src="https://asciinema.org/a/45UBTj01G7Yf7Sz5dDxgh2iiN.js" id="asciicast-45UBTj01G7Yf7Sz5dDxgh2iiN" 
-  async="true" 
-  data-preload="true" 
-  data-poster='npt:0:01' 
-></script>
----
-
-## Testing Methodology: NIST SP 800-115
-
-### 1. Planning
-
-Define objectives, scope, and rules of engagement.
-
-### 2. Discovery
-
-Active and passive reconnaissance.
-
-### 3. Attack
-
-Exploiting vulnerabilities to validate findings.
-
-### 3. Reporting
-
-Categorising vulnerabilities and proposing mitigations.
 
 ---
 
@@ -204,9 +226,11 @@ Categorising vulnerabilities and proposing mitigations.
 
 ## References
 
-computer misuse act 1990
-data protection act 2018
-nist sp 800-115
+Computer Misuse Act (1990). Statute Law Database Available at: [https://www.legislation.gov.uk/ukpga/1990/18/contents](https://www.legislation.gov.uk/ukpga/1990/18/contents).
+
+Data Protection Act (2018). King’s Printer of Acts of Parliament Available at: [https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted](https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted).
+
+Scarfone, K., Souppaya, M., Cody, A., and Orebaugh, A. (2021) NIST SP 800-115. NIST SP 800-115. Available at: [https://www.nist.gov/privacy-framework/nist-sp-800-115text](https://www.nist.gov/privacy-framework/nist-sp-800-115).
 
 ---
 
