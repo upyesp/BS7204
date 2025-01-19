@@ -27,9 +27,9 @@ Student: Peter Torkington, ID: 1902008
 ---
 <script src="https://asciinema.org/a/45UBTj01G7Yf7Sz5dDxgh2iiN.js" id="asciicast-45UBTj01G7Yf7Sz5dDxgh2iiN" 
   async="true" 
+  data-preload="true" 
   data-poster='npt:0:01' 
 ></script>
-Nist SP 800-115, Phases 2 & 3
 ---
 
 ## Scope of the Learning Café
