@@ -3,6 +3,8 @@ marp: true
 theme: custom-default
 class: invert
 transition: fade
+paginate: true
+footer: 'Peter Torkington, 1902008'
 ---
 
 # Learning Café Penetration Test
