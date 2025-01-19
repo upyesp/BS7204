@@ -17,12 +17,85 @@ Student: Peter Torkington, ID: 1902008
 
 ## Presentation Overview
 
+pete - update this last
+
 1. Scope and Requirements
 1. Vulnerability Analysis
 1. Testing Methodology
 1. Key Findings
 1. Secure Design Recommendations
 1. Conclusion
+
+---
+
+## Scope of the Learning Café
+
+### Network & Systems
+
+- Network infrastructure (wired & wireless)
+- Virtual Learning Environment (VLE)
+- Email services and academic databases
+- Online ordering system
+- Workstations and printers
+
+### Testing Constraints
+- Legal compliance (Computer Misuse Act 1990, DPA 2018)
+- Ethical guidelines (NIST SP 800-115)
+- Virtual environment (Metasploitable2 & Metasploitable3)
+---
+
+## Learning Café Vulnerabilities
+
+### Network Infrastructure
+
+- Weak segmentation between public and private (UoW) networks
+- Risks from public Wi-Fi access points
+
+### Authentication & Access Control
+
+- Susceptibility to phishing
+- Insecure BYOD connections
+
+### Web-Based Applications
+
+- SQL Injection & Cross-Site Scripting (XSS)
+- Apache
+
+### Emerging Threats
+
+- AI-driven attacks
+- Ransomware targeting educational institutions.
+
+---
+
+## Practical Evidence: Network Discovery
+
+### Tools Used
+
+- `nmap` for network mapping
+- OpenVAS for vulnerability scanning
+
+### Findings
+
+- Discovered devices: Metasploitable2, Metasploitable3, Debian
+- Total vulnerabilities (OpennVAS):
+  - High severity: 30.
+  - Medium severity: 49.
+
+---
+
+## Practical Evidence: Exploits
+
+### Metasploitable2
+
+- FTP (ProFTPD): Remote Code Execution (CVE-2015-3306)
+- Telnet: Default credentials used to gain access
+- Samba share: Uploaded malicious web shell
+
+### Metasploitable3
+
+- Apache (mod_cgi): Exploited Shellshock vulnerability (CVE-2014-6271)
+- CUPS: Remote Code Execution
 
 ---
 <script src="https://asciinema.org/a/45UBTj01G7Yf7Sz5dDxgh2iiN.js" id="asciicast-45UBTj01G7Yf7Sz5dDxgh2iiN" 
@@ -32,136 +105,71 @@ Student: Peter Torkington, ID: 1902008
 ></script>
 ---
 
-## Scope of the Learning Café
-
-- **Systems Evaluated:**
-  - Network infrastructure (wired & wireless)
-  - Virtual Learning Environment (VLE)
-  - Email services and academic databases
-  - Online ordering system
-  - Workstations and printers
-
-- **Testing Constraints:**
-  - Legal compliance (e.g., Computer Misuse Act 1990, GDPR).
-  - Ethical guidelines (e.g., OWASP, BCS).
-
----
-
-## Vulnerabilities Identified
-
-- **Network Infrastructure:**
-  - Weak segmentation.
-  - Risks from public Wi-Fi.
-
-- **Authentication & Access Control:**
-  - Susceptibility to phishing.
-  - Insecure BYOD connections.
-
-- **Web-Based Applications:**
-  - SQL Injection & Cross-Site Scripting (XSS).
-
-- **Emerging Threats:**
-  - AI-driven attacks.
-  - Ransomware targeting educational institutions.
-
----
-
-## Practical Evidence: Network Discovery
-
-- **Tools Used:**
-  - `nmap` for network mapping.
-  - OpenVAS for vulnerability scanning.
-
-- **Findings:**
-  - Discovered devices: Metasploitable2, Metasploitable3, Debian server.
-  - Total vulnerabilities:
-    - High severity: 30.
-    - Medium severity: 49.
-
----
-
-## Practical Evidence: Exploits
-
-- **Metasploitable2:**
-  - FTP (ProFTPD): Remote Code Execution (CVE-2015-3306).
-  - Telnet: Default credentials used to gain access.
-  - Samba share: Uploaded malicious web shell.
-
-- **Metasploitable3:**
-  - Apache (mod_cgi): Exploited Shellshock vulnerability (CVE-2014-6271).
-  - CUPS: Remote Code Execution.
-  - Privilege escalation to root.
-
----
-
 ## Testing Methodology: NIST SP 800-115
 
-1. **Planning:**
-   - Define objectives, scope, and rules of engagement.
-2. **Discovery:**
-   - Active and passive reconnaissance.
-3. **Attack:**
-   - Exploiting vulnerabilities to validate findings.
-4. **Reporting:**
-   - Categorising vulnerabilities and proposing mitigations.
+### 1. Planning
+
+Define objectives, scope, and rules of engagement.
+
+### 2. Discovery
+
+Active and passive reconnaissance.
+
+### 3. Attack
+
+Exploiting vulnerabilities to validate findings.
+
+### 3. Reporting
+
+Categorising vulnerabilities and proposing mitigations.
 
 ---
 
 ## Key Findings
 
-- **Critical Vulnerabilities:**
-  - FTP and Telnet on Metasploitable2.
-  - Apache and CUPS on Metasploitable3.
+### Critical Vulnerabilities
 
-- **Moderate Vulnerabilities:**
-  - Samba shares enabling lateral movement.
-  - MySQL misconfigurations.
+- FTP and Telnet on Metasploitable2
+- Apache and CUPS on Metasploitable3
 
-- **Impact:**
-  - Unauthorised access to sensitive systems.
-  - Potential for university-wide compromise.
+### Moderate Vulnerabilities
+
+- Samba shares
+- MySQL misconfigurations
+
+### Impact
+
+- Unauthorised access to sensitive systems and data
+- Potential for university-wide compromise
 
 ---
 
 ## Secure Design Recommendations
 
 ### Network Security
-- Implement segmentation between public and private networks.
-- Enforce WPA3 encryption for Wi-Fi.
+
+1. Implement segmentation between public and private networks.
+1. Remove public access to Wi-fi, or create is as a stand-alone network routing to an new, independent  ISP.
 
 ### Authentication
-- Use multi-factor authentication (MFA).
-- Enforce password complexity and regular updates.
+
+1. Extend use of multi-factor authentication (MFA).
+1. Enforce password complexity and regular updates.
 
 ### Application Security
-- Regular patching of software and systems.
-- Conduct code reviews and dynamic testing.
+
+1. Regular patching of software and systems.
+1. Conduct code reviews and dynamic testing.
 
 ---
 
 ## Secure Infrastructure
 
-1. **Firewalls:**
-   - Deploy stateful firewalls to limit unauthorised traffic.
-2. **Endpoint Security:**
-   - Install antivirus and endpoint detection tools.
-3. **Monitoring & Alerts:**
-   - Use SIEM systems for real-time threat detection.
-4. **Training:**
-   - Conduct regular user awareness programmes.
+### heading
 
----
-
-## Visual Evidence
-
-### Screenshots:
-
-- **Network Mapping:**
-  - `nmap` output showcasing device discovery.
-- **Vulnerability Scan:**
-  - OpenVAS results highlighting critical vulnerabilities.
-- **Exploitation Results:**
-  - Screenshots of successful exploits.
+1. kjhkjhkj
+1. jhgsdfgjhgasd
+1. jhgsdfgsdg
 
 ---
 
@@ -182,17 +190,23 @@ Student: Peter Torkington, ID: 1902008
 
 ## Conclusion
 
-- **Key Outcomes:**
-  - Identified critical vulnerabilities in network and application layers.
-  - Proposed actionable countermeasures for improvement.
+### Key Outcomes
 
-- **Next Steps:**
-  - Implement secure design recommendations.
-  - Regularly review and update security practices.
+- Identified critical vulnerabilities in network and application layers.
+- Proposed actionable countermeasures for improvement.
+
+### Next Steps
+
+- Implement secure design recommendations.
+- Regularly review and update security practices.
 
 ---
 
 ## References
+
+computer misuse act 1990
+data protection act 2018
+nist sp 800-115
 
 ---
 
