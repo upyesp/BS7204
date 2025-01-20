@@ -2,9 +2,7 @@
 
 This repository contains slides prepared for an assessed presentation for module BS7204, 'Network Security and Penetration Testing'.
 
-The presentation is located [here](https://bs7204.upyesp.org).
-
-The presentation is hosted on GitHub Pages.  A subdomain routes to the Pages site.
+The presentation is located here, [bs7204.upyesp.org](https://bs7204.upyesp.org).  It is hosted on GitHub Pages.
 
 The slides are defined in a single file, located at \slides\Slides.md. They are written in Markdown, then converted to a presentation using [Marp](https://marp.app/).  Many thanks to the Marp team.
 
