@@ -18,14 +18,12 @@ Student: Peter Torkington, ID: 1902008
 
 ## Presentation Overview
 
-pete - update this last
-
-1. Scope and Requirements
-1. Vulnerability Analysis
-1. Testing Methodology
-1. Key Findings
-1. Secure Design Recommendations
-1. Conclusion
+1. Testing Methodology - NIST SP 800-115
+2. Evidence of Performed Penetration Test
+3. Countermeasures and Secure Design
+4. Conclusion
+5. References
+6. Questions
 
 ---
 
@@ -49,59 +47,59 @@ Categorising vulnerabilities and proposing mitigations.
 
 ---
 
-## Scope of the Learning Café Network & Systems
-
-- Network infrastructure (wired & wireless)
-- Virtual Learning Environment (VLE)
-- Email services and academic databases
-- Online ordering system
-- Workstations and printers
-
----
-
-### Constraints
-
-- Legal compliance (Computer Misuse Act 1990, DPA 2018)
-- Ethical guidelines (NIST SP 800-115)
-- Virtual environment (Metasploitable2 & Metasploitable3)
-
----
-
-## Learning Café Vulnerabilities (1 of 2)
-
-### Network Infrastructure
-
-- Weak segmentation between public and private (UoW) networks
-- Risks from public Wi-Fi access points
-
-### Authentication & Access Control
-
-- Susceptibility to phishing
-- Insecure BYOD connections
-
----
-
-## Learning Café Vulnerabilities (2 of 2)
-
-### Web-Based Applications
-
-- SQL Injection & Cross-Site Scripting (XSS)
-- Apache
-
-### Emerging Threats
-
-- AI-driven attacks
-- Ransomware targeting educational institutions.
-
----
-
-## Practical Evidence
-
 <script src="https://asciinema.org/a/45UBTj01G7Yf7Sz5dDxgh2iiN.js" id="asciicast-45UBTj01G7Yf7Sz5dDxgh2iiN" 
   async="true" 
   data-preload="true" 
   data-poster='npt:0:01' 
 ></script>
+
+---
+
+## Practical Evidence: Discovery Phase - Network Mapping
+
+Establish network address range and IP of Kali device, using `ip addr`.
+
+![network devices discovered](./img/Network_Address_Range_and_Kali_IP.png)
+
+Network mapping using `nmap`
+
+![network devices discovered](./img/Network_Devices_Discovered.png)
+
+---
+
+## Practical Evidence: Discovery Phase - Vulnerabilities (OpenVAS)
+
+OpenVAS scan results, summary, by classification:
+
+![OpenVAS Results Summary](./img/OpenVAS_Results_By_Severity_Class_Pie.png)
+
+OpenVAS scan results, detail:
+
+![OpenVAS Results Detail](./img/OpenVAS_Results_By_Severity_Table.png)
+
+---
+
+## Practical Evidence: Discovery Phase - Vulnerabilities (nmap)
+
+`nmap` ports & services scan, results:
+
+![ports & services scan](./img/M2nmap.png)
+
+---
+
+## Practical Evidence: Attack Phase - ProFTPD Backdoor (root)
+
+Root access was obtained by exploiting a vsftpd backdoor vulnerability, which allowed the execution of arbitrary commands on the target system.
+
+![ProFTPD](./img/M2ftp.png)
+
+---
+
+## Practical Evidence: Attack Phase - Samba (root)
+
+Root access was obtained by exploiting Samba. Version 3.0.20-Debian was identified, which is vulnerable to the username map script command execution exploit.
+
+![ProFTPD](./img/M2samba.png)
 
 ---
 
@@ -123,19 +121,15 @@ Categorising vulnerabilities and proposing mitigations.
 
 </div>
 </div>
-  
-![OpenVAS Results Summary](./img/OpenVAS_Results_By_Severity_Class_Pie.png)
-
 
 ---
 
-## Findings
+## Practical Evidence: Findings
 
-- Discovered devices: Metasploitable2, Metasploitable3, Debian
+- Discovered devices: Metasploitable2, Metasploitable3, Debian 
 - Total vulnerabilities (OpennVAS):
   - High severity: 30.
   - Medium severity: 49.
-
 ---
 
 ## Practical Evidence: Exploits
@@ -234,6 +228,10 @@ Categorising vulnerabilities and proposing mitigations.
 
 Computer Misuse Act (1990). Statute Law Database Available at: [https://www.legislation.gov.uk/ukpga/1990/18/contents](https://www.legislation.gov.uk/ukpga/1990/18/contents).
 
+NIST (2014) NVD - cve-2014-6271. Available at: [https://nvd.nist.gov/vuln/detail/cve-2014-6271](https://nvd.nist.gov/vuln/detail/cve-2014-6271).
+
+NIST (2015) NVD - CVE-2015-3306. Available at: [https://nvd.nist.gov/vuln/detail/CVE-2015-3306](https://nvd.nist.gov/vuln/detail/CVE-2015-3306).
+
 Data Protection Act (2018). King’s Printer of Acts of Parliament Available at: [https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted](https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted).
 
 Scarfone, K., Souppaya, M., Cody, A., and Orebaugh, A. (2021) NIST SP 800-115. NIST SP 800-115. Available at: [https://www.nist.gov/privacy-framework/nist-sp-800-115text](https://www.nist.gov/privacy-framework/nist-sp-800-115).
@@ -329,3 +327,51 @@ graph TD;
     B-->D;
     C-->D;
 </div>
+
+---
+
+## Scope of the Learning Café Network & Systems
+
+- Network infrastructure (wired & wireless)
+- Virtual Learning Environment (VLE)
+- Email services and academic databases
+- Online ordering system
+- Workstations and printers
+
+---
+
+### Constraints
+
+- Legal compliance (Computer Misuse Act 1990, DPA 2018)
+- Ethical guidelines (NIST SP 800-115)
+- Virtual environment (Metasploitable2 & Metasploitable3)
+
+---
+
+## Learning Café Vulnerabilities (1 of 2)
+
+### Network Infrastructure
+
+- Weak segmentation between public and private (UoW) networks
+- Risks from public Wi-Fi access points
+
+### Authentication & Access Control
+
+- Susceptibility to phishing
+- Insecure BYOD connections
+
+---
+
+## Learning Café Vulnerabilities (2 of 2)
+
+### Web-Based Applications
+
+- SQL Injection & Cross-Site Scripting (XSS)
+- Apache
+
+### Emerging Threats
+
+- AI-driven attacks
+- Ransomware targeting educational institutions.
+
+---
