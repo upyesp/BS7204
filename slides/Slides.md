@@ -69,11 +69,9 @@ Network mapping using `nmap`
 
 ## Practical Evidence: Discovery Phase - Vulnerabilities (OpenVAS)
 
-OpenVAS scan results, summary, by classification:
+OpenVAS scan results, summary & detailed:
 
 ![OpenVAS Results Summary](./img/OpenVAS_Results_By_Severity_Class_Pie.png)
-
-OpenVAS scan results, detail:
 
 ![OpenVAS Results Detail](./img/OpenVAS_Results_By_Severity_Table.png)
 
