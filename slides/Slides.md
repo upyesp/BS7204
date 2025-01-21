@@ -143,11 +143,25 @@ sudo su -
 
 ---
 
+## Practical Evidence: Attack Phase - Apache v2.4.7
+
+Access was obtained by remote code execution (RCE) vulnerability in Apache 'v2.4.7'.
+
+![Apache](./img/M3apache.png)
+
+---
+
 ## Practical Evidence: Attack Phase - ProFTPD v1.3.5
 
 Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.3.5'.
 
-![Telnet](./img/M3proftpd.png)
+![ProFTPD](./img/M3proftpd.png)
+
+---
+
+## Practical Evidence: Reporting Phase
+
+![ProFTPD](./img/M3proftpd.png)
 
 ---
 
@@ -270,6 +284,10 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 - Implement secure design recommendations.
 - Regularly review and update security practices.
 
+## Thank You
+
+### Questions?
+
 ---
 
 ## References
@@ -284,11 +302,6 @@ Data Protection Act (2018). King’s Printer of Acts of Parliament Available at:
 
 Scarfone, K., Souppaya, M., Cody, A., and Orebaugh, A. (2021) NIST SP 800-115. NIST SP 800-115. Available at: [https://www.nist.gov/privacy-framework/nist-sp-800-115text](https://www.nist.gov/privacy-framework/nist-sp-800-115).
 
----
-
-## Thank You
-
-### Questions?
 
 ---
 
