@@ -165,7 +165,7 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 
 ---
 
-## Practical Evidence: Reporting Phase 1/2 - Countermeasures
+## Practical Evidence: Reporting Phase 1/3 - Countermeasures
 
 | Vulnerability             | Countermeasure                                  |
 | :------------------------ | :---------------------------------------------- |
@@ -178,12 +178,11 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 | 7. Apache v2.4.7          | Upgrade to current version.                     |
 | 8. ProFTPD v1.3.5         | Upgrade to current version.                     |
 
-
 ---
 
 ## Practical Evidence: Reporting Phase 2/3 - Secure Design
 
-![Apache](./img/Secure Design.svg)
+![Secure Design](./img/Secure Design.png)
 
 ---
 
