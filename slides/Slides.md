@@ -163,7 +163,7 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 
 ---
 
-## Practical Evidence: Reporting Phase 1/ - Countermeasures
+## Practical Evidence: Reporting Phase 1/2 - Countermeasures
 
 | Vulnerability             | Countermeasure                                  |
 | :------------------------ | :---------------------------------------------- |
@@ -171,119 +171,36 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 | 2. Samba. Version '3.0.20 | Upgrade to current version.                     |
 | 3. Unreal IRCd v3.2.8.1   | Upgrade to current version.                     |
 | 4. MySQL                  | Replace blank password with secure pwd or keys. |
-| 5. VNC                    | Replace weak password.                          |
+| 5. VNC                    | Replace weak password, or key-based             |
 | 6. Telnet                 | Uninstall Telnet. Implement SSH.                |
 | 7. Apache v2.4.7          | Upgrade to current version.                     |
 | 8. ProFTPD v1.3.5         | Upgrade to current version.                     |
 
 ---
 
-## Tools Used
+## Practical Evidence: Reporting Phase 2/2 - Secure Design
 
 <div class="columns">
 <div>
 
 ### Network
 
-- `nmap` for network mapping
-- OpenVAS for vulnerability scanning
+- VLANs for segmentation.
+- Remove public Wi-Fi, or isolate it.
 
 </div>
 <div>
 
-### Exploits
+### Systems
 
-- Metasploit Framework v6
+- Migrate from self hosted to professionally hosted cloud services.
+- Regularly patch OSs, applications, databases, web servers, and services.
+- Authentication: change from passwords to key based, `passkeys`:
+  - supported by the main identity providers: Microsoft, Google, Apple.
+  - organisations that support passkeys include: GitHub, GitLab, AWS, Azure, Amazon, eBay, WordPress.
 
 </div>
 </div>
-
----
-
-## Practical Evidence: Findings
-
-- Discovered devices: Metasploitable2, Metasploitable3, Debian
-- Total vulnerabilities (OpennVAS):
-  - High severity: 30.
-  - Medium severity: 49.
-
----
-
-## Practical Evidence: Exploits
-
-### Metasploitable2
-
-- FTP (ProFTPD): Remote Code Execution (CVE-2015-3306)
-- Telnet: Default credentials used to gain access
-- Samba share: Uploaded malicious web shell
-
-### Metasploitable3
-
-- Apache (mod_cgi): Exploited Shellshock vulnerability (CVE-2014-6271)
-- CUPS: Remote Code Execution
-
----
-
-## Key Findings
-
-### Critical Vulnerabilities
-
-- FTP and Telnet on Metasploitable2
-- Apache and CUPS on Metasploitable3
-
-### Moderate Vulnerabilities
-
-- Samba shares
-- MySQL misconfigurations
-
-### Impact
-
-- Unauthorised access to sensitive systems and data
-- Potential for university-wide compromise
-
----
-
-## Secure Design Recommendations
-
-### Network Security
-
-1. Implement segmentation between public and private networks.
-1. Remove public access to Wi-fi, or create is as a stand-alone network routing to an new, independent ISP.
-
-### Authentication
-
-1. Extend use of multi-factor authentication (MFA).
-1. Enforce password complexity and regular updates.
-
-### Application Security
-
-1. Regular patching of software and systems.
-1. Conduct code reviews and dynamic testing.
-
----
-
-## Secure Infrastructure
-
-### heading
-
-1. kjhkjhkj
-1. jhgsdfgjhgasd
-1. jhgsdfgsdg
-
----
-
-## Countermeasure Justifications
-
-### Addressed Vulnerabilities:
-
-- **FTP:** Disable unencrypted FTP services.
-- **Apache & CUPS:** Regular updates and secure configurations.
-- **Telnet:** Replace with SSH for secure remote access.
-
-### Infrastructure Enhancements:
-
-- Harden BYOD policies.
-- Introduce VLANs for network segmentation.
 
 ---
 
@@ -316,138 +233,5 @@ NIST (2015) NVD - CVE-2015-3306. Available at: [https://nvd.nist.gov/vuln/detail
 Data Protection Act (2018). King’s Printer of Acts of Parliament Available at: [https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted](https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted).
 
 Scarfone, K., Souppaya, M., Cody, A., and Orebaugh, A. (2021) NIST SP 800-115. NIST SP 800-115. Available at: [https://www.nist.gov/privacy-framework/nist-sp-800-115text](https://www.nist.gov/privacy-framework/nist-sp-800-115).
-
----
-
-## Slide 1
-
-- Item 1
-- Item 2
-- Item 3
-
-![Image](./img/test_animation.gif)
-
----
-
-## Slide 2
-
-![Image](https://picsum.photos/800/600)
-
----
-
-## Slide 3
-
-> This is a quote.
-
----
-
-## Slide 4
-
-| Column 1 | Column 2 |
-| -------- | -------- |
-| Item 1   | Item 2   |
-| Item 3   | Item 4   |
-
----
-
-![bg opacity](https://picsum.photos/800/600?image=53)
-
-## Slide 5
-
-<div class="columns">
-<div>
-
-## Left
-
-- 1
-- 2
-
-</div>
-<div>
-
-## Right
-
-- 3
-- 4
-
-</div>
-</div>
-
----
-
-## Slide 6
-
-<i class="fa-brands fa-twitter"></i> Twitter:
-<i class="fa-brands fa-mastodon"></i> Mastodon:
-<i class="fa-brands fa-linkedin"></i> LinkedIn:
-<i class="fa fa-window-maximize"></i> Blog:
-<i class="fa-brands fa-github"></i> GitHub:
-
----
-
-# <!--fit--> Large Text
-
----
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
-
-# Mermaid
-
-<div class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</div>
-
----
-
-## Scope of the Learning Café Network & Systems
-
-- Network infrastructure (wired & wireless)
-- Virtual Learning Environment (VLE)
-- Email services and academic databases
-- Online ordering system
-- Workstations and printers
-
----
-
-### Constraints
-
-- Legal compliance (Computer Misuse Act 1990, DPA 2018)
-- Ethical guidelines (NIST SP 800-115)
-- Virtual environment (Metasploitable2 & Metasploitable3)
-
----
-
-## Learning Café Vulnerabilities (1 of 2)
-
-### Network Infrastructure
-
-- Weak segmentation between public and private (UoW) networks
-- Risks from public Wi-Fi access points
-
-### Authentication & Access Control
-
-- Susceptibility to phishing
-- Insecure BYOD connections
-
----
-
-## Learning Café Vulnerabilities (2 of 2)
-
-### Web-Based Applications
-
-- SQL Injection & Cross-Site Scripting (XSS)
-- Apache
-
-### Emerging Threats
-
-- AI-driven attacks
-- Ransomware targeting educational institutions.
 
 ---
