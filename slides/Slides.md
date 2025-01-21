@@ -49,6 +49,8 @@ Categorising vulnerabilities and proposing mitigations.
 
 ---
 
+## Practical Evidence: Demonstration
+
 <script src="https://asciinema.org/a/45UBTj01G7Yf7Sz5dDxgh2iiN.js" id="asciicast-45UBTj01G7Yf7Sz5dDxgh2iiN" 
   async="true" 
   data-preload="true" 
@@ -176,16 +178,23 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 | 7. Apache v2.4.7          | Upgrade to current version.                     |
 | 8. ProFTPD v1.3.5         | Upgrade to current version.                     |
 
+
 ---
 
-## Practical Evidence: Reporting Phase 2/2 - Secure Design
+## Practical Evidence: Reporting Phase 2/3 - Secure Design
+
+![Apache](./img/Secure Design.svg)
+
+---
+
+## Practical Evidence: Reporting Phase 3/3 - Secure Design
 
 <div class="columns">
 <div>
 
 ### Network
 
-- VLANs for segmentation.
+- Implement VLANs for segmentation.
 - Remove public Wi-Fi, or isolate it.
 
 </div>
@@ -196,9 +205,7 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 - Migrate from self hosted to professionally hosted cloud services.
 - Regularly patch OSs, applications, databases, web servers, and services.
 - Authentication: change from passwords to key based, `passkeys`:
-  - supported by the main identity providers: Microsoft, Google, Apple.
-  - organisations that support passkeys include: GitHub, GitLab, AWS, Azure, Amazon, eBay, WordPress.
-
+  - supported by identity providers: Microsoft, Google, Apple.
 </div>
 </div>
 
@@ -213,7 +220,9 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 
 ### Next Steps
 
-- Implement secure design recommendations.
+- Implement:
+  - Countermeasures.
+  - Secure design.
 - Regularly review and update security practices.
 
 ## Thank You
@@ -233,5 +242,3 @@ NIST (2015) NVD - CVE-2015-3306. Available at: [https://nvd.nist.gov/vuln/detail
 Data Protection Act (2018). King’s Printer of Acts of Parliament Available at: [https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted](https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted).
 
 Scarfone, K., Souppaya, M., Cody, A., and Orebaugh, A. (2021) NIST SP 800-115. NIST SP 800-115. Available at: [https://www.nist.gov/privacy-framework/nist-sp-800-115text](https://www.nist.gov/privacy-framework/nist-sp-800-115).
-
----
