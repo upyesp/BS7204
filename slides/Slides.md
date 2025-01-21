@@ -182,7 +182,7 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 
 ## Practical Evidence: Reporting Phase 2/3 - Secure Design
 
-![Secure Design](./img/Secure Design.png)
+![Secure Design](./img/Secure_Design.svg)
 
 ---
 
