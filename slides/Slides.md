@@ -9,6 +9,7 @@ paginate: true
 # Learning Café Penetration Test
 
 ## University of Winchester
+
 ![UoW Logo](./img/uow.png)
 Module: BS7204 Network Security and Penetration Testing
 Lecturer: Rhys Lockley
@@ -19,11 +20,12 @@ Student: Peter Torkington, ID: 1902008
 ## Presentation Overview
 
 1. Testing Methodology - NIST SP 800-115
-2. Evidence of Performed Penetration Test
-3. Countermeasures and Secure Design
-4. Conclusion
-5. References
+2. Discovery Phase
+3. Attack Phase
+4. Reporting Phase
+5. Conclusion
 6. Questions
+7. References
 
 ---
 
@@ -55,7 +57,7 @@ Categorising vulnerabilities and proposing mitigations.
 
 ---
 
-## Practical Evidence: Discovery Phase - Network Mapping
+## Practical Evidence: Discovery Phase 1/3 - Address Range & Kali IP
 
 Find the IP of Kali VM & the network address range: `ip addr`.
 
@@ -67,7 +69,7 @@ Discover devices on the network: `nmap -sn 10.0.2.1/24`
 
 ---
 
-## Practical Evidence: Discovery Phase - Vulnerabilities (OpenVAS)
+## Practical Evidence: Discovery Phase 2/3 - Vulnerabilities (OpenVAS)
 
 OpenVAS scan results, summary & detailed:
 
@@ -77,7 +79,7 @@ OpenVAS scan results, summary & detailed:
 
 ---
 
-## Practical Evidence: Discovery Phase - Vulnerabilities (nmap)
+## Practical Evidence: Discovery Phase 3/3 - Vulnerabilities (nmap)
 
 `nmap` ports & services scan results:
 
@@ -85,7 +87,7 @@ OpenVAS scan results, summary & detailed:
 
 ---
 
-## Practical Evidence: Attack Phase - vsftpd v2.3.4 Backdoor (root)
+## Practical Evidence: Attack Phase - 1 of 8 - vsftpd v2.3.4 Backdoor (root)
 
 Root access was obtained by exploiting a backdoor in vsftpd, version '2.3.4'.
 
@@ -93,7 +95,7 @@ Root access was obtained by exploiting a backdoor in vsftpd, version '2.3.4'.
 
 ---
 
-## Practical Evidence: Attack Phase - Samba (root)
+## Practical Evidence: Attack Phase - 2 of 8 - Samba (root)
 
 Root access was obtained by exploiting Samba. Version '3.0.20-Debian' was identified, which is vulnerable to the username map script command execution exploit.
 
@@ -101,7 +103,7 @@ Root access was obtained by exploiting Samba. Version '3.0.20-Debian' was identi
 
 ---
 
-## Practical Evidence: Attack Phase - Unreal IRCd v3.2.8.1 (root)
+## Practical Evidence: Attack Phase - 3 of 8 - Unreal IRCd v3.2.8.1 (root)
 
 Root access was obtained by exploiting a backdoor in unrealIRCd 'v3.2.8.1'.
 
@@ -109,9 +111,9 @@ Root access was obtained by exploiting a backdoor in unrealIRCd 'v3.2.8.1'.
 
 ---
 
-## Practical Evidence: Attack Phase - VNC Password Scanner (root)
+## Practical Evidence: Attack Phase - 4 of 8 - MySQL (root)
 
-No tools required.  Default credentials wre used, 'root:toor', failed.  Tried 'root:null' (no password), success.  Full access to all databases and tables.
+No tools required. Default credentials wre used, 'root:toor', failed. Tried 'root:null' (no password), success. Full access to all databases and tables.
 
 ```bash
 mysql -u root -p -h 10.0.2.4 --ssl=off
@@ -121,20 +123,22 @@ mysql -u root -p -h 10.0.2.4 --ssl=off
 
 ---
 
-## Practical Evidence: Attack Phase - MySQL (root)
+## Practical Evidence: Attack Phase - 5 of 8 - VNC Password Scanner (root)
 
-Root access was obtained by exploiting a poorly configured VNC server.  A password scanner module in Metasploite was used, attempting multiple passwords.  Access was gained with a password of... 'password'.
+Root access was obtained by exploiting a poorly configured VNC server. A password scanner module in Metasploite was used, attempting multiple passwords. Access was gained with a password of... 'password'.
 
 ![VNC](./img/M2vnc.png)
 
 ---
 
-## Practical Evidence: Attack Phase - Telnet (root)
+## Practical Evidence: Attack Phase - 6 of 8 - Telnet (root)
 
 Root access was obtained by exploiting Telnet default credentials.
 
 ```bash
-telnet 10.0.2.4 # login: msfadmin:msfadmin
+# default creds... msfadmin:msfadmin
+telnet 10.0.2.4
+
 # then switch to root...
 sudo su -
 ```
@@ -143,7 +147,7 @@ sudo su -
 
 ---
 
-## Practical Evidence: Attack Phase - Apache v2.4.7
+## Practical Evidence: Attack Phase - 7 of 8 - Apache v2.4.7
 
 Access was obtained by remote code execution (RCE) vulnerability in Apache 'v2.4.7'.
 
@@ -151,7 +155,7 @@ Access was obtained by remote code execution (RCE) vulnerability in Apache 'v2.4
 
 ---
 
-## Practical Evidence: Attack Phase - ProFTPD v1.3.5
+## Practical Evidence: Attack Phase - 8 of 8 - ProFTPD v1.3.5
 
 Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.3.5'.
 
@@ -159,17 +163,27 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 
 ---
 
-## Practical Evidence: Reporting Phase
+## Practical Evidence: Reporting Phase 1/ - Countermeasures
 
-![ProFTPD](./img/M3proftpd.png)
+| Vulnerability             | Countermeasure                                  |
+| ------------------------- | ----------------------------------------------- |
+| 1. vsftpd v2.3.4          | Upgrade to current version.                     |
+| 2. Samba. Version '3.0.20 | Upgrade to current version.                     |
+| 3. Unreal IRCd v3.2.8.1   | Upgrade to current version.                     |
+| 4. MySQL                  | Replace blank password with secure pwd or keys. |
+| 5. VNC                    | Replace weak password.                          |
+| 6. Telnet                 | Uninstall Telnet. Implement SSH.                |
+| 7. Apache v2.4.7          | Upgrade to current version.                     |
+| 8. ProFTPD v1.3.5         | Upgrade to current version.                     |
 
 ---
 
 ## Tools Used
+
 <div class="columns">
 <div>
 
-### Network 
+### Network
 
 - `nmap` for network mapping
 - OpenVAS for vulnerability scanning
@@ -188,10 +202,11 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 
 ## Practical Evidence: Findings
 
-- Discovered devices: Metasploitable2, Metasploitable3, Debian 
+- Discovered devices: Metasploitable2, Metasploitable3, Debian
 - Total vulnerabilities (OpennVAS):
   - High severity: 30.
   - Medium severity: 49.
+
 ---
 
 ## Practical Evidence: Exploits
@@ -233,7 +248,7 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 ### Network Security
 
 1. Implement segmentation between public and private networks.
-1. Remove public access to Wi-fi, or create is as a stand-alone network routing to an new, independent  ISP.
+1. Remove public access to Wi-fi, or create is as a stand-alone network routing to an new, independent ISP.
 
 ### Authentication
 
@@ -302,7 +317,6 @@ Data Protection Act (2018). King’s Printer of Acts of Parliament Available at:
 
 Scarfone, K., Souppaya, M., Cody, A., and Orebaugh, A. (2021) NIST SP 800-115. NIST SP 800-115. Available at: [https://www.nist.gov/privacy-framework/nist-sp-800-115text](https://www.nist.gov/privacy-framework/nist-sp-800-115).
 
-
 ---
 
 ## Slide 1
@@ -337,6 +351,7 @@ Scarfone, K., Souppaya, M., Cody, A., and Orebaugh, A. (2021) NIST SP 800-115. N
 ---
 
 ![bg opacity](https://picsum.photos/800/600?image=53)
+
 ## Slide 5
 
 <div class="columns">
@@ -362,11 +377,11 @@ Scarfone, K., Souppaya, M., Cody, A., and Orebaugh, A. (2021) NIST SP 800-115. N
 
 ## Slide 6
 
-<i class="fa-brands fa-twitter"></i> Twitter: 
-<i class="fa-brands fa-mastodon"></i> Mastodon: 
-<i class="fa-brands fa-linkedin"></i> LinkedIn: 
-<i class="fa fa-window-maximize"></i> Blog: 
-<i class="fa-brands fa-github"></i> GitHub: 
+<i class="fa-brands fa-twitter"></i> Twitter:
+<i class="fa-brands fa-mastodon"></i> Mastodon:
+<i class="fa-brands fa-linkedin"></i> LinkedIn:
+<i class="fa fa-window-maximize"></i> Blog:
+<i class="fa-brands fa-github"></i> GitHub:
 
 ---
 
