@@ -167,7 +167,7 @@ exploit
 
 <!-- A different type of exploit.  The vulnerability is in the poor configuration of MySQl, in that the password for 'root' is blank! -->
 
-No tools required. Default credentials wre used, 'root:toor', failed. Tried 'root:null' (no password), success. Full access to all databases and tables.
+No tools required. Default credentials were used, 'root:toor', failed. Tried 'root:null' (no password), success. Full access to all databases and tables.
 
 ```bash
 mysql -u root -p -h 10.0.2.4 --ssl=off
