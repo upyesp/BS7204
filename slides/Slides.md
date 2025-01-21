@@ -57,11 +57,11 @@ Categorising vulnerabilities and proposing mitigations.
 
 ## Practical Evidence: Discovery Phase - Network Mapping
 
-Establish network address range and IP of Kali device, using `ip addr`.
+Find the IP of Kali VM & the network address range: `ip addr`.
 
-![network devices discovered](./img/Network_Address_Range_and_Kali_IP.png)
+![IP of Kali and subnet](./img/Network_Address_Range_and_Kali_IP.png)
 
-Network mapping using `nmap`
+Discover devices on the network: `nmap -sn 10.0.2.1/24`
 
 ![network devices discovered](./img/Network_Devices_Discovered.png)
 
@@ -79,25 +79,75 @@ OpenVAS scan results, summary & detailed:
 
 ## Practical Evidence: Discovery Phase - Vulnerabilities (nmap)
 
-`nmap` ports & services scan, results:
+`nmap` ports & services scan results:
 
 ![ports & services scan](./img/M2nmap.png)
 
 ---
 
-## Practical Evidence: Attack Phase - ProFTPD Backdoor (root)
+## Practical Evidence: Attack Phase - vsftpd v2.3.4 Backdoor (root)
 
-Root access was obtained by exploiting a vsftpd backdoor vulnerability, which allowed the execution of arbitrary commands on the target system.
+Root access was obtained by exploiting a backdoor in vsftpd, version '2.3.4'.
 
-![ProFTPD](./img/M2ftp.png)
+![vsftpd v2.3.4](./img/M2ftp.png)
 
 ---
 
 ## Practical Evidence: Attack Phase - Samba (root)
 
-Root access was obtained by exploiting Samba. Version 3.0.20-Debian was identified, which is vulnerable to the username map script command execution exploit.
+Root access was obtained by exploiting Samba. Version '3.0.20-Debian' was identified, which is vulnerable to the username map script command execution exploit.
 
-![ProFTPD](./img/M2samba.png)
+![Samba Exploit](./img/M2samba.png)
+
+---
+
+## Practical Evidence: Attack Phase - Unreal IRCd v3.2.8.1 (root)
+
+Root access was obtained by exploiting a backdoor in unrealIRCd 'v3.2.8.1'.
+
+![Unreal IRCd Exploit](./img/M2unrealIRC.png)
+
+---
+
+## Practical Evidence: Attack Phase - VNC Password Scanner (root)
+
+No tools required.  Default credentials wre used, 'root:toor', failed.  Tried 'root:null' (no password), success.  Full access to all databases and tables.
+
+```bash
+mysql -u root -p -h 10.0.2.4 --ssl=off
+```
+
+![MySQL](./img/M2mysql.png)
+
+---
+
+## Practical Evidence: Attack Phase - MySQL (root)
+
+Root access was obtained by exploiting a poorly configured VNC server.  A password scanner module in Metasploite was used, attempting multiple passwords.  Access was gained with a password of... 'password'.
+
+![VNC](./img/M2vnc.png)
+
+---
+
+## Practical Evidence: Attack Phase - Telnet (root)
+
+Root access was obtained by exploiting Telnet default credentials.
+
+```bash
+telnet 10.0.2.4 # login: msfadmin:msfadmin
+# then switch to root...
+sudo su -
+```
+
+![Telnet](./img/M2telnet.png)
+
+---
+
+## Practical Evidence: Attack Phase - ProFTPD v1.3.5
+
+Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.3.5'.
+
+![Telnet](./img/M3proftpd.png)
 
 ---
 
