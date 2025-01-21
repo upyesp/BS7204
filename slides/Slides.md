@@ -166,7 +166,7 @@ Access was obtained by remote code execution (RCE) vulnerability in ProFTPD 'v1.
 ## Practical Evidence: Reporting Phase 1/ - Countermeasures
 
 | Vulnerability             | Countermeasure                                  |
-| ------------------------- | ----------------------------------------------- |
+| :------------------------ | :---------------------------------------------- |
 | 1. vsftpd v2.3.4          | Upgrade to current version.                     |
 | 2. Samba. Version '3.0.20 | Upgrade to current version.                     |
 | 3. Unreal IRCd v3.2.8.1   | Upgrade to current version.                     |
