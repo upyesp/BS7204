@@ -3,6 +3,9 @@ marp: true
 theme: gala
 transition: fade
 paginate: true
+class:
+  - invert
+  - lead
 ---
 
 # Learning Café Penetration Test
@@ -26,10 +29,9 @@ Student: Peter Torkington, ID: 1902008
 <!-- The presentation follows on from the report.
 The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 
-<div class="columns">
-<div>
+![bg right:35%](./img/phases.png)
 
-1. Testing Methodology - NIST SP 800-115
+1. Planning Phase
 2. Discovery Phase
 3. Attack Phase
 4. Reporting Phase
@@ -37,60 +39,11 @@ The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 6. Questions
 7. References
 
-</div>
-<div>
-
-<div class="mermaid">
-flowchart TD
-    A[Planning] --> B[Discovery]
-    B --> C[Attack]
-    C --> D[Reporting]
-    C --> B
-    A --> D
-</div>
-
-
-</div>
-</div>
-
 ---
 
 ## Planning Phase
 
-
-<div class="mermaid">
-flowchart TD
-    A[Planning] --> B[Discovery]
-    B --> C[Attack]
-    C --> D[Reporting]
-    C --> B
-    A --> D
-</div>
-
----
-
-## Planning Phase
-
-<div class="mermaid">
-gantt
-    title Learning Café Penetration Test Plan
-    todayMarker off
-    dateFormat  YYYY-MM-DD
-    tickInterval 1week
-    excludes    2024-12-24,2024-12-25,2024-12-26,2025-01-01
-    section Planning Phase
-    Define scope, objectives, and rules    :done, p1, 2024-12-01, 2024-12-05
-    Obtain permissions and set up communication    :p2, 2024-12-06, 2024-12-09
-    section Discovery Phase
-    Information gathering and reconnaissance :active, d1, 2024-12-10, 2024-12-15
-    Vulnerability scanning and analysis      :d2, 2024-12-16, 2024-12-20
-    section Attack Phase
-    Simulated attacks on vulnerabilities     :a1, 2025-01-02, 2025-01-07
-    section Reporting Phase
-    Prepare report and presentation :r1, 2025-01-08, 2025-01-22
-
-</div>
-
+![project plan](./img/plan.png)
 
 ---
 
