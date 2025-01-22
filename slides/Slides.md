@@ -29,7 +29,7 @@ Student: Peter Torkington, ID: 1902008
 <!-- The presentation follows on from the report.
 The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 
-![bg right:35%](./img/phases.png)
+![bg right:35%](./img/phases.svg)
 
 1. Planning Phase
 2. Discovery Phase
@@ -43,7 +43,7 @@ The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 
 ## Planning Phase
 
-![project plan](./img/plan.png)
+![project plan](./img/plan.svg)
 
 ---
 
