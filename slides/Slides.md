@@ -22,6 +22,9 @@ Student: Peter Torkington, ID: 1902008
 <!-- The presentation follows on from the report.
 The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 
+<div class="columns">
+<div>
+
 1. Testing Methodology - NIST SP 800-115
 2. Discovery Phase
 3. Attack Phase
@@ -29,6 +32,62 @@ The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 5. Conclusion
 6. Questions
 7. References
+
+</div>
+<div>
+
+### Systems
+
+- Migrate from self hosted to professionally hosted cloud services.
+- Regularly patch OSs, applications, databases, web servers, and services.
+- Authentication: change from passwords to key based, `passkeys`:
+  - supported by identity providers: Microsoft, Google, Apple.
+  - 
+</div>
+</div>
+
+---
+
+## Planning Phase
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+<div class="mermaid">
+flowchart TD
+    A[Planning] --> B[Discovery]
+    B --> C[Attack]
+    C --> D[Reporting]
+    C --> B
+    A --> D
+</div>
+
+---
+
+## Planning Phase
+
+<div class="mermaid">
+gantt
+    title Learning Café Penetration Test Plan
+    todayMarker off
+    dateFormat  YYYY-MM-DD
+    tickInterval 1week
+    excludes    2024-12-24,2024-12-25,2024-12-26,2025-01-01
+    section Planning Phase
+    Define scope, objectives, and rules    :done, p1, 2024-12-01, 2024-12-05
+    Obtain permissions and set up communication    :p2, 2024-12-06, 2024-12-09
+    section Discovery Phase
+    Information gathering and reconnaissance :active, d1, 2024-12-10, 2024-12-15
+    Vulnerability scanning and analysis      :d2, 2024-12-16, 2024-12-20
+    section Attack Phase
+    Simulated attacks on vulnerabilities     :a1, 2025-01-02, 2025-01-07
+    section Reporting Phase
+    Drafting report and documenting findings :r1, 2025-01-08, 2025-01-22
+
+</div>
+
 
 ---
 
@@ -338,6 +397,12 @@ run
 
 ## Practical Evidence: Reporting Phase 2/3 - Secure Design
 
+![Secure Design](./img/Secure_Design.svg)
+
+---
+
+## Practical Evidence: Reporting Phase 3/3 - Secure Design
+
 <!-- These are changes are strategic, requiring planning, resources, budget. -->
 
 <div class="columns">
@@ -359,12 +424,6 @@ run
   - supported by identity providers: Microsoft, Google, Apple.
 </div>
 </div>
-
----
-
-## Practical Evidence: Reporting Phase 3/3 - Secure Design
-
-![Secure Design](./img/Secure_Design.svg)
 
 ---
 
