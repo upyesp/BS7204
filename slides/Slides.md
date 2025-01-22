@@ -45,27 +45,6 @@ The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 
 ![project plan](./img/plan.png)
 
----
-
-## Penetration Testing Methodology Used: NIST SP 800-115
-
-<!-- The methodology, NIST, drove the process. -->
-
-### 1. Planning
-
-Define objectives, scope, and rules of engagement.
-
-### 2. Discovery
-
-Active and passive reconnaissance.
-
-### 3. Attack
-
-Exploiting vulnerabilities to validate findings.
-
-### 4. Reporting
-
-Categorising vulnerabilities and proposing mitigations.
 
 ---
 
