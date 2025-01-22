@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: custom-default
+theme: gala
 transition: fade
 paginate: true
 ---
@@ -40,13 +40,16 @@ The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 </div>
 <div>
 
-### Systems
+<div class="mermaid">
+flowchart TD
+    A[Planning] --> B[Discovery]
+    B --> C[Attack]
+    C --> D[Reporting]
+    C --> B
+    A --> D
+</div>
 
-- Migrate from self hosted to professionally hosted cloud services.
-- Regularly patch OSs, applications, databases, web servers, and services.
-- Authentication: change from passwords to key based, `passkeys`:
-  - supported by identity providers: Microsoft, Google, Apple.
-  - 
+
 </div>
 </div>
 
@@ -84,7 +87,7 @@ gantt
     section Attack Phase
     Simulated attacks on vulnerabilities     :a1, 2025-01-02, 2025-01-07
     section Reporting Phase
-    Drafting report and documenting findings :r1, 2025-01-08, 2025-01-22
+    Prepare report and presentation :r1, 2025-01-08, 2025-01-22
 
 </div>
 
@@ -422,6 +425,7 @@ run
 - Regularly patch OSs, applications, databases, web servers, and services.
 - Authentication: change from passwords to key based, `passkeys`:
   - supported by identity providers: Microsoft, Google, Apple.
+
 </div>
 </div>
 
