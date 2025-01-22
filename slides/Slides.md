@@ -1,7 +1,6 @@
 ---
 marp: true
 theme: custom-default
-class: invert
 transition: fade
 paginate: true
 ---
@@ -14,6 +13,11 @@ paginate: true
 Module: BS7204 Network Security and Penetration Testing
 Lecturer: Rhys Lockley
 Student: Peter Torkington, ID: 1902008
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
 
 ---
 
@@ -50,10 +54,6 @@ The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 
 ## Planning Phase
 
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 <div class="mermaid">
 flowchart TD
