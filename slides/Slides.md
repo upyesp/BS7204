@@ -3,9 +3,6 @@ marp: true
 theme: gala
 transition: fade
 paginate: true
-class:
-  - invert
-  - lead
 ---
 
 # Learning Café Penetration Test
@@ -43,8 +40,7 @@ The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 
 ## Planning Phase
 
-![project plan](./img/plan.png)
-
+![project plan](./img/plan.svg)
 
 ---
 
