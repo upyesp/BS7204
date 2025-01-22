@@ -3,7 +3,6 @@ marp: true
 theme: gala
 transition: fade
 paginate: true
-class: lead
 ---
 
 # Learning Café Penetration Test
@@ -27,7 +26,7 @@ Student: Peter Torkington, ID: 1902008
 <!-- The presentation follows on from the report.
 The report had 4 sections, the presentation is effectively sections 5 and 6. -->
 
-![bg right:15%](./img/phases.svg)
+![bg right:40%](./img/phases.svg)
 
 1. Planning Phase
 2. Discovery Phase
