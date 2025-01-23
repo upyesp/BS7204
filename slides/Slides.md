@@ -12,7 +12,7 @@ paginate: true
 ![UoW Logo](./img/uow.png)
 Module: BS7204 Network Security and Penetration Testing
 Lecturer: Rhys Lockley
-Student: Peter Torkington, ID: 1902008
+Student ID: 1902008
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
